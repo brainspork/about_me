@@ -1,0 +1,48 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+header{
+  background-color:#00122e;
+  font-family:'Slabo 27px', serif;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+
+header h1{
+  font-size:40px;
+}
+
+header p{
+  font-size:20px;
+}
+
+body{
+  background-color:#000;
+}
+
+main{
+  color:#fff;
+  font-family:'Slabo 27px', serif;
+  margin:10px;
+}
+
+main section h3{
+  font-size:20px;
+  width:50%;
+  margin-bottom:15px;
+  text-align:center;
+}
+
+main section p{
+  display:inline-block;
+  width:50%;
+  text-indent:50px;
+}
+
+main img{
+  margin:10px;
+  float:right;
+}
