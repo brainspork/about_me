@@ -1,41 +1,22 @@
 'use strict';
 
-var motorcycle= prompt('Do I know how to ride motorcycles? Yes or No.');
-console.log('Motorcycle:', motorcycle);
-if(motorcycle.toLowerCase() === 'yes' || motorcycle.toLowerCase() === 'y'){
-  alert('Correct!', motorcycle);
-}else{
-  alert('Wrong!');
+var questions = ['Do I know how to ride motorcycles?', 'Is my favorite genre of music pop?', 'Am I an avid gamer?', 'Do I plan on trying my luck in amerture MMA in the future?', 'Have I ever been to another country?'];
+var answers = ['yes', 'no', 'yes', 'yes', 'no'];
+var userResponse = [ask];
+
+var user = prompt('Hi! What\'s your name?');
+console.log('User:', user);
+alert('Nice to meet you ' + user + ', I hope you like guessing games.');
+
+for(var i = 0; i < questions.length; i++){
+  var ask = prompt(questions[i]).toLowerCase();
+  console.log('User Answer ' + [i+1] +':' + ask);
+  if(ask === answers[i]){
+    alert('Correct!');
+  }else{
+    alert('Incorrect!');
+  }
 }
 
-var age= prompt('Am I over 30 years old? Yes or No.');
-console.log('Age:', age);
-if(age.toLowerCase() === 'yes' || age.toLowerCase() === 'y'){
-  alert('Wrong!');
-}else{
-  alert('Correct!');
-}
 
-var pop= prompt('Do I like pop music? Yes or No.');
-console.log('Pop Music:', pop);
-if(pop.toLowerCase() === 'yes' || pop.toLowerCase() === 'y'){
-  alert('Wrong!');
-}else{
-  alert('Correct');
-}
-
-var games=prompt('Do I like playing videogames? Yes or No.');
-console.log('Videogames:', games);
-if(games.toLowerCase() === 'yes' || games.toLowerCase() === 'y'){
-  alert('Corret!');
-}else{
-  alert('Wrong!');
-}
-
-var mma=prompt('Do I enjoy MMA? Yes or No.');
-console.log('MMA:', mma);
-if(mma.toLowerCase() === 'yes' || mma.toLowerCase() === 'y'){
-  alert('Correct!');
-}else{
-  alert('Wrong!');
-}
+'I\'m thinking of a number between 1 and 10. What is it?', 'Name one of my favorite metal bands.'
