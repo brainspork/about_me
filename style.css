@@ -5,6 +5,7 @@
 
 header{
   background-color:#00122e;
+  border-bottom: 4px solid #009999;
   font-family:'Slabo 27px', serif;
   color:#fff;
   text-align:center;
@@ -27,22 +28,17 @@ main{
   color:#fff;
   font-family:'Slabo 27px', serif;
   margin:10px;
-}
-
-main section h3{
-  font-size:20px;
-  width:50%;
-  margin-bottom:15px;
   text-align:center;
 }
 
-main section p{
-  display:inline-block;
-  width:50%;
-  text-indent:50px;
+main section h3{
+  font-size:25px;
+  margin-bottom:15px;
+  text-align:center;
+  letter-spacing:1px;
 }
 
-main img{
-  margin:10px;
-  float:right;
+main section p{
+  font-size:20px;
+  font-weight:100;
 }
