@@ -18,5 +18,37 @@ for(var i = 0; i < questions.length; i++){
   }
 }
 
+var num = Math.floor((Math.random()*10)+1);
+var counter = 1;
+var userNum;
+console.log('Random number:', num);
 
-'I\'m thinking of a number between 1 and 10. What is it?', 'Name one of my favorite metal bands.'
+  while(userNum !== num){
+    userNum = parseInt(prompt('I\'m thinking of a number between 1 and 10. What is it?'));
+    if(userNum < num){
+      alert('You guessed to low!');
+      counter++;
+    }else if(userNum > num){
+      alert('You guessed to high!');
+      counter++;
+    }else if(userNum === NaN || userNum === null){
+      alert('Please enter number.');
+      counter++;
+    }
+    if(counter > 4){
+      alert('Better luck next time!');
+      break;
+    }
+  }
+
+  console.log('Number of attempts:', counter);
+
+
+
+
+
+
+
+
+
+'Name one of my favorite metal bands.'
