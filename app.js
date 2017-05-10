@@ -43,6 +43,38 @@ console.log('Random number:', num);
 
   console.log('Number of attempts:', counter);
 
+var metal = ['iron maiden', 'judas priest','metallica','death'];
+var userMetal;
+var counterTwo = 0;
+var flag;
+
+while(counterTwo < 7){
+  userMetal = prompt('Name one of my favorite metal bands.').toLowerCase();
+  for(var j = 0; j < metal.length; j++){
+    if(userMetal === metal[j]){
+      flag = true;
+    }
+    console.log('Current band:', metal[j]);
+  }
+  if (!flag){
+    alert('Nope! Try again.');
+    console.log('User Answer:', userMetal);
+    counterTwo++;
+  }else{
+    alert('You got one! The choices were: Iron Maiden, Judas Priest, Metallica, Death');
+    counterTwo+=7;
+  }
+    if(counterTwo === 6){
+      alert('Better luck next time! The choices were: Iron Maiden, Judas Priest, Metallica, Death');
+      break;
+  }
+}
+
+console.log('Attempts:', counterTwo);
+
+
+
+
 
 
 
