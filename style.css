@@ -1,13 +1,13 @@
 *{
   margin:0;
   padding:0;
+  font-family:'Slabo 27px', serif;
+  color:#fff;
 }
 
 header{
   background-color:#00122e;
-  border-bottom: 4px solid #009999;
-  font-family:'Slabo 27px', serif;
-  color:#fff;
+  border-bottom: 4px solid ;
   text-align:center;
   padding:20px;
 }
@@ -21,24 +21,41 @@ header p{
 }
 
 body{
-  background-color:#000;
+  background-image:url(http://wallpapercave.com/wp/ll3GLmS.jpg);
 }
 
 main{
-  color:#fff;
-  font-family:'Slabo 27px', serif;
   margin:10px;
-  text-align:center;
+  text-align:left;
+  font-size:20px;
+}
+main section{
+  background-color:#111;
+  border-radius:10px;
+  margin:0 5%;
+  padding:3%;
 }
 
 main section h3{
-  font-size:25px;
-  margin-bottom:15px;
-  text-align:center;
+  border-bottom:2px solid #009999;
   letter-spacing:1px;
+  font-size:25px;
+  margin:3px 0;
+  padding-left:2%;
 }
 
 main section p{
-  font-size:20px;
   font-weight:100;
+  text-indent:90px;
+}
+
+ul, ol{
+  list-style:none;
+  font-weight:100;
+}
+
+ol li{
+  list-style:circle;
+  margin:10px 0 10px 20px;
+
 }
