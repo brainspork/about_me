@@ -28,61 +28,66 @@ function yes() {
 yes ();
 
 //random number guessing
-var num = Math.floor((Math.random()*10)+1);
-var counter = 1;
-var userNum;
-console.log('Random number:', num);
+function ranNum() {
+  var num = Math.floor((Math.random()*10)+1);
+  var counter = 1;
+  var userNum;
+  console.log('Random number:', num);
 
-while(userNum !== num){
-  userNum = parseInt(prompt('I\'m thinking of a number between 1 and 10. What is it?'));
-  if(userNum < num){
-    alert('You guessed to low!');
-    counter++;
-  }else if(userNum > num){
-    alert('You guessed to high!');
-    counter++;
-  }else if(userNum === NaN || userNum === null){
-    alert('Please enter number.');
-    counter++;
-  }
-  if(counter > 4){
-    alert('Better luck next time! The number was', num);
-    break;
-  }
-}
-if(userNum === num){
-  alert('You got it!');
-  score++;
-  console.log('Number of attempts:', counter);
-}
-
-//Question 7 multiple choice
-var metal = ['iron maiden', 'judas priest','metallica','death'];
-var userMetal;
-var counterTwo = 0;
-var flag;
-
-while(counterTwo < 7){
-  userMetal = prompt('Name one of my favorite metal bands.').toLowerCase();
-  for(var j = 0; j < metal.length; j++){
-    if(userMetal === metal[j]){
-      flag = true;
+  while(userNum !== num){
+    userNum = parseInt(prompt('I\'m thinking of a number between 1 and 10. What is it?'));
+    if(userNum < num){
+      alert('You guessed to low!');
+      counter++;
+    }else if(userNum > num){
+      alert('You guessed to high!');
+      counter++;
+    }else if(userNum === NaN || userNum === null){
+      alert('Please enter number.');
+      counter++;
     }
-    console.log('Current band:', metal[j]);
-  }
-  if (!flag){
-    alert('Nope! Try again.');
-    console.log('User Answer:', userMetal);
-    counterTwo++;
-  }else{
-    alert('You got one! The choices were: Iron Maiden, Judas Priest, Metallica, Death');
-    counterTwo+=7;
-    score++;
-  }
-    if(counterTwo === 6){
-      alert('Better luck next time! The choices were: Iron Maiden, Judas Priest, Metallica, Death');
+    if(counter > 4){
+      alert('Better luck next time! The number was', num);
       break;
+    }
+  }
+  if(userNum === num){
+    alert('You got it!');
+    score++;
+    console.log('Number of attempts:', counter);
   }
 }
-console.log('Attempts:', counterTwo);
+ranNum();
+//Question 7 multiple choice
+function multiChoice(){
+  var metal = ['iron maiden', 'judas priest','metallica','death'];
+  var userMetal;
+  var counterTwo = 0;
+  var flag;
+
+  while(counterTwo < 7){
+    userMetal = prompt('Name one of my favorite metal bands.').toLowerCase();
+    for(var j = 0; j < metal.length; j++){
+      if(userMetal === metal[j]){
+        flag = true;
+      }
+      console.log('Current band:', metal[j]);
+    }
+    if (!flag){
+      alert('Nope! Try again.');
+      console.log('User Answer:', userMetal);
+      counterTwo++;
+    }else{
+      alert('You got one! The choices were: Iron Maiden, Judas Priest, Metallica, Death');
+      counterTwo+=7;
+      score++;
+    }
+      if(counterTwo === 6){
+        alert('Better luck next time! The choices were: Iron Maiden, Judas Priest, Metallica, Death');
+        break;
+    }
+  }
+  console.log('Attempts:', counterTwo);
+}
+multiChoice();
 alert('Congratulations '+user+'! You finished! You got '+score+' out of 7!');
