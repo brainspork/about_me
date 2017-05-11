@@ -23,8 +23,6 @@ for(var i = 0; i < questions.length; i++){
   console.log(ask);
 }
 
-
-
 //random number guessing
 var num = Math.floor((Math.random()*10)+1);
 var counter = 1;
@@ -53,7 +51,6 @@ if(userNum === num){
   score++;
   console.log('Number of attempts:', counter);
 }
-
 
 //Question 7 multiple choice
 var metal = ['iron maiden', 'judas priest','metallica','death'];
@@ -84,6 +81,4 @@ while(counterTwo < 7){
   }
 }
 console.log('Attempts:', counterTwo);
-
-
 alert('Congradulations '+user+'! You finished! You got '+score+' out of 7!');
