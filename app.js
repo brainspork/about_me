@@ -7,21 +7,25 @@ alert('Nice to meet you ' + user + '. My name is Anthony. I hope you like guessi
 var score = 0;
 
 //questions 1-5
-var questions = ['Do I know how to ride motorcycles?', 'Is my favorite genre of music pop?', 'Am I an avid gamer?', 'Do I plan on trying my luck in amerture MMA in the future?', 'Have I ever been to another country?'];
-var answers = ['yes', 'no', 'yes', 'yes', 'no'];
-var answersAlt = ['y', 'n', 'y', 'y', 'n'];
+function yes() {
+  var questions = ['Do I know how to ride motorcycles?', 'Is my favorite genre of music pop?', 'Am I an avid gamer?', 'Do I plan on trying my luck in amerture MMA in the future?', 'Have I ever been to another country?'];
+  var answers = ['yes', 'no', 'yes', 'yes', 'no'];
+  var answersAlt = ['y', 'n', 'y', 'y', 'n'];
 
-for(var i = 0; i < questions.length; i++){
-  var ask = prompt(questions[i]).toLowerCase();
-  console.log('User Answer ' + [i+1] +':' + ask);
-  if(ask === answers[i]|| ask === answersAlt[i]){
-    alert('Correct!');
-    score++;
-  }else{
-    alert('Incorrect!');
+  for(var i = 0; i < questions.length; i++){
+    var ask = prompt(questions[i]).toLowerCase();
+    console.log('User Answer ' + [i+1] +':' + ask);
+    if(ask === answers[i]|| ask === answersAlt[i]){
+      alert('Correct!');
+      score++;
+    }else{
+      alert('Incorrect!');
+    }
+    console.log(ask);
   }
-  console.log(ask);
+
 }
+yes ();
 
 //random number guessing
 var num = Math.floor((Math.random()*10)+1);
@@ -81,4 +85,4 @@ while(counterTwo < 7){
   }
 }
 console.log('Attempts:', counterTwo);
-alert('Congradulations '+user+'! You finished! You got '+score+' out of 7!');
+alert('Congratulations '+user+'! You finished! You got '+score+' out of 7!');
