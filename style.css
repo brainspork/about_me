@@ -7,7 +7,7 @@
 
 header{
   background-color:#00122e;
-  border-bottom: 4px solid ;
+  border-bottom: 4px solid #009999;
   text-align:center;
   padding:20px;
 }
@@ -21,14 +21,15 @@ header p{
 }
 
 body{
-  background-image:url(http://wallpapercave.com/wp/ll3GLmS.jpg);
+  background-color:#000;
 }
 
 main{
-  margin:10px;
   text-align:left;
   font-size:20px;
+  margin:10px;
 }
+
 main section{
   background-color:#111;
   border-radius:10px;
@@ -46,7 +47,7 @@ main section h3{
 
 main section p{
   font-weight:100;
-  text-indent:90px;
+  text-indent:80px;
 }
 
 ul, ol{
@@ -57,5 +58,8 @@ ul, ol{
 ol li{
   list-style:circle;
   margin:10px 0 10px 20px;
+}
 
+.topTen li{
+  list-style:decimal;
 }
