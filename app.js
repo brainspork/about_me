@@ -3,24 +3,26 @@
 //user info
 var user = prompt('Hi! What\'s your name?');
 console.log('User:', user);
-alert('Nice to meet you ' + user + ', I hope you like guessing games.');
+alert('Nice to meet you ' + user + '. My name is Anthony. I hope you like guessing games. Answer the next five questions with yes or no');
 var score = 0;
 
 //questions 1-5
 var questions = ['Do I know how to ride motorcycles?', 'Is my favorite genre of music pop?', 'Am I an avid gamer?', 'Do I plan on trying my luck in amerture MMA in the future?', 'Have I ever been to another country?'];
 var answers = ['yes', 'no', 'yes', 'yes', 'no'];
+var answersAlt = ['y', 'n', 'y', 'y', 'n'];
 
 for(var i = 0; i < questions.length; i++){
   var ask = prompt(questions[i]).toLowerCase();
   console.log('User Answer ' + [i+1] +':' + ask);
-  if(ask === answers[i]){
+  if(ask === answers[i]|| ask === answersAlt[i]){
     alert('Correct!');
     score++;
   }else{
     alert('Incorrect!');
   }
+  console.log(ask);
 }
-console.log(userResponse);
+
 
 
 //random number guessing
@@ -42,7 +44,7 @@ while(userNum !== num){
     counter++;
   }
   if(counter > 4){
-    alert('Better luck next time!');
+    alert('Better luck next time! The number was', num);
     break;
   }
 }
@@ -84,4 +86,4 @@ while(counterTwo < 7){
 console.log('Attempts:', counterTwo);
 
 
-alert('Congradulations! You finished! You got '+score+' out of 7!');
+alert('Congradulations '+user+'! You finished! You got '+score+' out of 7!');
