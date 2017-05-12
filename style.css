@@ -83,11 +83,7 @@ ol li{
   margin:10px 0 10px 20px;
 }
 
-button{
-  background:#111;
-  border:none;
-  font:20px arial;
-  color:white;
+.top-ten{
 }
 
 .top-ten li{
@@ -95,6 +91,8 @@ button{
   display:inline-block;
   height:200px;
   width:200px;
+  font-size:20px;
+  text-align:center;
 }
 
 .top-ten span{
@@ -118,4 +116,7 @@ button{
 
 .top-ten li:hover span{
   display:block;
+  bottom:-1;
+  margin-top:-25px;
+
 }
