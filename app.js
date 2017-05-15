@@ -5,9 +5,8 @@ var user = prompt('Hi! What\'s your name?');
 console.log('User:', user);
 alert('Nice to meet you ' + user + '. My name is Anthony. I hope you like guessing games. Answer the next five questions with yes or no');
 var score = 0;
-
 //questions 1-5
-function yes() {
+function firstFive() {
   var questions = ['Do I know how to ride motorcycles?', 'Is my favorite genre of music pop?', 'Am I an avid gamer?', 'Do I plan on trying my luck in amerture MMA in the future?', 'Have I ever been to another country?'];
   var answers = ['yes', 'no', 'yes', 'yes', 'no'];
   var answersAlt = ['y', 'n', 'y', 'y', 'n'];
@@ -23,10 +22,7 @@ function yes() {
     }
     console.log(ask);
   }
-
 }
-yes ();
-
 //random number guessing
 function ranNum() {
   var num = Math.floor((Math.random()*10)+1);
@@ -47,7 +43,7 @@ function ranNum() {
       counter++;
     }
     if(counter > 4){
-      alert('Better luck next time! The number was', num);
+      alert('Better luck next time! The number was ' + num);
       break;
     }
   }
@@ -57,7 +53,6 @@ function ranNum() {
     console.log('Number of attempts:', counter);
   }
 }
-ranNum();
 //Question 7 multiple choice
 function multiChoice(){
   var metal = ['iron maiden', 'judas priest','metallica','death'];
@@ -82,12 +77,14 @@ function multiChoice(){
       counterTwo+=7;
       score++;
     }
-      if(counterTwo === 6){
-        alert('Better luck next time! The choices were: Iron Maiden, Judas Priest, Metallica, Death');
-        break;
+    if(counterTwo === 6){
+      alert('Better luck next time! The choices were: Iron Maiden, Judas Priest, Metallica, Death');
+      break;
     }
   }
   console.log('Attempts:', counterTwo);
 }
+firstFive();
+ranNum();
 multiChoice();
 alert('Congratulations '+user+'! You finished! You got '+score+' out of 7!');
